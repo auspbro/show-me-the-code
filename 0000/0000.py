@@ -1,4 +1,4 @@
-#!/usr/local/bin/python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 __author__ = 'Ryan'
 
@@ -21,7 +21,7 @@ def draw_text(text, fill_color, windows_font):
     draw.text((x-250, 10), text, fill_color, font)
 
     im.save('zen-demo.jpg')
-    # im.show('zen-demo.jpg')     # 显示图片
+    # im.show()     # 显示图片
     return 0
 
 if __name__ == '__main__':
