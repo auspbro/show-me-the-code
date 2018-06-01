@@ -18,6 +18,10 @@ def gen_coupon(id, goods):
     c_code = raw_64.decode()
     return c_code
 
+def save_coupon_init():
+    with open('coupon.txt', 'a+') as file:
+        file.write("Coupon Code, you are being watched!!!\n")
+        file.write("-------------------------------------\n")
 
 def save_coupon(c_code):
     with open('coupon.txt', 'a+') as file:
@@ -30,9 +34,13 @@ def parse_coupon(c_code):
     print('解析优惠码:', base64.urlsafe_b64decode(c_code.encode('utf-8')))
 
 def gen_all():
+    save_coupon_init()
+
     for i in range(1000, 1200):
         c_code = gen_coupon(str(i), str(int(i/2)))
         save_coupon(c_code)
+        # show_coupon(c_code)
+        # parse_coupon(c_code)
 
 
 if __name__ == '__main__':
