@@ -7,7 +7,7 @@
 import string
 import random
 
-KEY_LEN = 20
+KEY_LEN = 50
 KEY_NUM = 200
 
 def base_str():
