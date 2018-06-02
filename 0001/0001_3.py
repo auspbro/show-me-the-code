@@ -24,6 +24,9 @@ def key_num(num, result=None):
         result.append(key_gen())
     return result
 
+def save_key_gen():
+    open()
+
 def print_key(num):
     for i in key_num(num):
         print i
