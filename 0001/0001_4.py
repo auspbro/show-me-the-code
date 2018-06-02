@@ -8,9 +8,10 @@ import string, random
 
 KEY_NUM = 300
 KEY_LEN = 30
+FILENAME = 'coupon_key.txt'
 
 def random_str(num, length):
-    f = open('coupon_key.txt', 'wb')
+    f = open(FILENAME, 'wb')
     with f as file:
        for i in range(num):
             chars = string.letters + string.digits
