@@ -27,15 +27,14 @@ def key_num(num, result=None):
         result.append(key_gen())
     return result
 
-<<<<<<< HEAD
-def save_key_gen():
-    open()
-=======
->>>>>>> c8844f7b3742d07e45f0f569c2d9c1567efe1cf4
+def save_key_gen(result):
+    with open('key.txt', 'a+') as file:
+        file.write(result + '\n')
 
 def print_key(num):
     for i in key_num(num):
         print i
+        save_key_gen(i)
 
 
 if __name__ == '__main__':
